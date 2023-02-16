@@ -1,0 +1,23 @@
+type Query {
+  getEmp(empId: Int): EmployeeEntity
+  getAllEmp: [EmployeeEntity]
+}
+
+type Mutation {
+  createEmployee(empId: EmployeeInput): EmployeeEntity
+}
+
+input EmployeeInput {
+  name: String
+  empId: String
+  role: String
+  projectName: String
+}
+
+type EmployeeEntity {
+  id: ID!
+  name: String
+  empId: String
+  role: String
+  projectName: String
+}

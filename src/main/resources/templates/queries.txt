@@ -1,0 +1,25 @@
+mutation{
+    createEmployee(empId : {
+      name: "sourav",
+	  empId: "1325335",
+	  role: "AC",
+	  projectName: "ADM"
+
+    }){
+        id
+        name
+        role
+    }
+}
+query{
+getAllEmp{
+id
+role
+empId
+projectName
+}
+getEmp(empId : 2){
+role
+empId
+}
+}
